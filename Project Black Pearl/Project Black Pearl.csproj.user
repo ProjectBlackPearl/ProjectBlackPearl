@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AddGameScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomizableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomizableTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DLMethodPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DownloadPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DownloadsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DownloadsPageDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EditGameScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GameLibraryDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GamesDisplayContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Launcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Library.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PreferencesScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
