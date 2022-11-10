@@ -1,0 +1,36 @@
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.deps.json
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.dll
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.pdb
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.AssemblyReference.cache
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.GeneratedMSBuildEditorConfig.editorconfig
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfoInputs.cache
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfo.cs
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.CoreCompileInputs.cache
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.dll
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\refint\Project Black Pearl.SDK.dll
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.pdb
+E:\Personal Backup\ProgrammingProjects\Personal Tracker\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\ref\Project Black Pearl.SDK.dll
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.deps.json
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.AssemblyReference.cache
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfoInputs.cache
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfo.cs
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.CoreCompileInputs.cache
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\refint\Project Black Pearl.SDK.dll
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\Evan\Source\Repos\Project-Black-Pearl\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\ref\Project Black Pearl.SDK.dll
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.deps.json
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.AssemblyReference.cache
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfoInputs.cache
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfo.cs
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.CoreCompileInputs.cache
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\refint\Project Black Pearl.SDK.dll
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\DissTract\Documents\GitHub\Project-Black-Pearl\Project Black Pearl.SDK\obj\Debug\net6.0\ref\Project Black Pearl.SDK.dll
