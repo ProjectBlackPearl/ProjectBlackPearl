@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project Black Pearl", "Project Black Pearl\Project Black Pearl.csproj", "{DEC20E73-9902-4F66-AE76-7B792785D2DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3805F620-FBBE-421A-ACD9-9CD3EF267ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Black Pearl.SDK", "Project Black Pearl.SDK\Project Black Pearl.SDK.csproj", "{443E15FF-85BC-42F4-9C6C-52EEFAD70CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEC20E73-9902-4F66-AE76-7B792785D2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC20E73-9902-4F66-AE76-7B792785D2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC20E73-9902-4F66-AE76-7B792785D2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC20E73-9902-4F66-AE76-7B792785D2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443E15FF-85BC-42F4-9C6C-52EEFAD70CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443E15FF-85BC-42F4-9C6C-52EEFAD70CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443E15FF-85BC-42F4-9C6C-52EEFAD70CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443E15FF-85BC-42F4-9C6C-52EEFAD70CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3348074B-0E13-46D5-AF8E-353F214EA452}
+	EndGlobalSection
+EndGlobal
