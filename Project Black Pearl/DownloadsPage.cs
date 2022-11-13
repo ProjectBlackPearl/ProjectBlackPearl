@@ -63,7 +63,7 @@ namespace Project_Black_Pearl
         //Method that reads the plugins from Assembly
         static List<PBPPlugin> ReadExtensions()
         {
-            var pluginsLists = new List<PBPPlugin>();
+            var pluginsLists = new List<PBPPlugin>();       
 
             //Read DLL files from the extensions folder
             var files = Directory.GetFiles(pluginsPath, "*.dll");
@@ -144,6 +144,8 @@ namespace Project_Black_Pearl
 
         public int CurrentGame = 0;
 
+        public int CurrentIndex = 0;
+
         public bool DoneWithCombining = false;
 
         //Sets the UI's color
@@ -171,15 +173,17 @@ namespace Project_Black_Pearl
         {
             InitializeComponent();
 
+            DirectoryCreator(completePath);
+            DirectoryCreator(pluginsPath);
+            DirectoryCreator(scrapersPath);
+            DirectoryCreator(QueryPath);
+            DirectoryCreator(pluginsPath + "Scrapers\\");
+            DirectoryCreator(pluginsPath + "Images\\");
+
             //Startup thread, also runs the prefetc scrapers
             Thread OnStartThread = new Thread(new ThreadStart(FirstLoad));
             OnStartThread.IsBackground = true;
             OnStartThread.Start();
-
-            if (!Directory.Exists(pluginsPath))
-            {
-                Directory.CreateDirectory(pluginsPath);
-            }
         }
 
         //Runs the search on search button click
@@ -235,13 +239,28 @@ namespace Project_Black_Pearl
                     string PostFetchType = ScraperTypes[FilterIdx];
                     string TempPrefetchFolder = PrefetchTempFolders[FilterIdx];
 
+                    DirectoryCreator(PrefetchQueryPath0);
+                    DirectoryCleaner(PrefetchQueryPath0);
+
+                    DirectoryCreator(PrefetchQueryPath1);
+                    DirectoryCleaner(PrefetchQueryPath1);
+
+                    DirectoryCreator(PrefetchQueryPath2);
+                    DirectoryCleaner(PrefetchQueryPath2);
+
+                    DirectoryCreator(PrefetchQueryPath3);
+                    DirectoryCleaner(PrefetchQueryPath3);
+
+                    DirectoryCreator(PrefetchQueryPath4);
+                    DirectoryCleaner(PrefetchQueryPath4);
+
+                    DirectoryCreator(PrefetchQueryPath5);
+                    DirectoryCleaner(PrefetchQueryPath5);
+
+
                     FileDeletor(OutputFile);
-                    FileDeletor(Done0Path);
-                    FileDeletor(Done1Path);
-                    FileDeletor(Done2Path);
-                    FileDeletor(Done3Path);
-                    FileDeletor(Done4Path);
-                    FileDeletor(Done5Path);
+
+                    DirectoryCreator(TempPrefetchFolder);
 
                     DirectoryInfo di = new DirectoryInfo(TempPrefetchFolder);
 
@@ -330,7 +349,10 @@ namespace Project_Black_Pearl
         {
             JsonParser(Query, PrefetchCache);
             RunSecondScraper(PostFetchScraperPath, ForumLinks, PostFetchScraperType, TempPrefetchFolder, GameTitles);
-            CombinePrefetchOutputs(TempPrefetchFolder, OutputFile);
+
+            Thread CombinerThread = new Thread(() => CombinePrefetchOutputs(TempPrefetchFolder, OutputFile));
+            CombinerThread.IsBackground = true;
+            CombinerThread.Start();
         }
 
         public void DirectoryCreator(string Path)
@@ -338,6 +360,16 @@ namespace Project_Black_Pearl
             if (!Directory.Exists(Path))
             {
                 Directory.CreateDirectory(Path);
+            }
+        }
+
+        public void DirectoryCleaner(string Path)
+        {
+            DirectoryInfo di = new DirectoryInfo(Path);
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
             }
         }
 
@@ -351,50 +383,70 @@ namespace Project_Black_Pearl
 
         public void RunSecondScraper(string SecondScraperPath, List<string> URLsList, string ScraperType, string TempPrefetchFolder, List<string> TitlesList)
         {
+            CurrentIndex = 0;
             List<string> LinksCopy = URLsList;
             int idx = 0;           
-
-            DirectoryCreator(PrefetchQueryPath0);
-            DirectoryCreator(PrefetchQueryPath1);
-            DirectoryCreator(PrefetchQueryPath2);
-            DirectoryCreator(PrefetchQueryPath3);
-            DirectoryCreator(PrefetchQueryPath4);
-            DirectoryCreator(PrefetchQueryPath5);
-
-            string URLS = "";
-            foreach(string Link in LinksCopy)
-            {
-                URLS += Link + "\n";
-            }
-            URLS += string.Format("Links Lengths: {0}", LinksCopy.Count.ToString());
 
             DirectoryCreator(TempPrefetchFolder);
            
             for (int i = 0; i <= LinksCopy.Count -1 ; i++)
             {
                 string Filename = TempPrefetchFolder + idx.ToString() + ".json";
-                
+                string DonePath = "";
+
                 CurrentGame = i;
 
-                Thread ScrapingThread = new Thread(() => this.RunPrefetchSecondPayload(SecondScraperPath, LinksCopy[i], Filename, ScraperType, TitlesList[i]));
+                switch (CurrentGame)
+                {
+                    case 0:
+                        DonePath = Done0Path;
+                        break;
+                    case 1:
+                        DonePath = Done1Path;
+                        break;
+                    case 2:
+                        DonePath = Done2Path;
+                        break;
+                    case 3:
+                        DonePath = Done3Path;
+                        break;
+                    case 4:
+                        DonePath = Done4Path;
+                        break;
+                    case 5:
+                        DonePath = Done5Path;
+                        break;
+                }
+
+                Thread ScrapingThread = new Thread(() => RunPrefetchSecondPayload(SecondScraperPath, LinksCopy[i], Filename, ScraperType, TitlesList[i], DonePath));
                 ScrapingThread.IsBackground = true;
                 ScrapingThread.Start();
-                Thread.Sleep(100);
-                idx++;               
+                Thread.Sleep(2000);
+
+                string DebugPath = "C:/Users/DissTract/Downloads/Debugging" + CurrentIndex.ToString() + ".txt";
+                File.WriteAllText(DebugPath, "Threading Worked");
+
+                idx++;
+                CurrentIndex++;               
             }
         }
 
-        public void RunPrefetchSecondPayload(string ScraperPath, string URL, string PrefetchTempFile, string ScraperType, string GameName)
+        public void RunPrefetchSecondPayload(string ScraperPath, string URL, string PrefetchTempFile, string ScraperType, string GameName, string DonePath)
         {
             List<string> Args = new List<string>();
             Args.Add(URL);
             Args.Add(PrefetchTempFile);
             Args.Add(GameName);
+            Args.Add(DonePath);
 
             if (ScraperType == "Binary")
             {
+
                 RunBinary(ScraperPath, Args);
+                File.WriteAllText("C:/Users/DissTract/Downloads/BinaryExecuted.txt", string.Format("Scraper Path:{0} \nURL:{1} \nPrefetchTempFile:{2} \nGameName:{3} \nDonePath:{4} \n ", ScraperPath, URL, PrefetchTempFile, GameName, DonePath));
+
             }
+            /*
             else if(ScraperType == "Python Binary")
             {
                 string CurrentFileTextPath = PrefetchQueryPath + "CurrentIndex.txt";
@@ -421,13 +473,11 @@ namespace Project_Black_Pearl
                 {
                     process.WaitForExit();
                 }
-            }
+            }*/
         }
 
         public void CombinePrefetchOutputs(string TempOutputsFolder, string ReadyOutputsFile)
         {
-            bool GoodToGo = false;
-
             bool Done0 = false;
             bool Done1 = false;
             bool Done2 = false;
@@ -491,17 +541,6 @@ namespace Project_Black_Pearl
            
             if (Done0 && Done1 && Done2 && Done3 && Done4 && Done5)
             {
-                GoodToGo = true;
-            }
-            else
-            {
-                GoodToGo = false;
-            }
-
-            //string DebuggerPath = QueryPath + "Debug.txt";           
-
-            if (GoodToGo)
-            {
                 //Gets a list of all Jsons in the Output folder 
                 string[] filePaths = Directory.GetFiles(TempOutputsFolder, "*.json",
                                          SearchOption.TopDirectoryOnly);
@@ -524,9 +563,11 @@ namespace Project_Black_Pearl
             else
             {
                 DoneWithCombining = false;
-                Thread.Sleep(500);
+                Thread.Sleep(3000);
                 CombinePrefetchOutputs(TempOutputsFolder, ReadyOutputsFile);
-            }          
+            }
+
+            //string DebuggerPath = QueryPath + "Debug.txt";      
         }
 
         private bool GetReadyStatus(string ReadyStatusFilePath)
@@ -566,7 +607,7 @@ namespace Project_Black_Pearl
             for (int i = 0; i < SearchResults.response.Count; i++)
             {
                 ListOfTitles.Add(SearchResults.response[i].Title);
-                ListOfLinks.Add(SearchResults.response[i].URI);
+                ListOfLinks.Add(SearchResults.response[i].URL);
             }
 
             List<string> TitlesContainingQuery = null;
@@ -652,53 +693,22 @@ namespace Project_Black_Pearl
                 {
                     ForumLinks.Add(Link);
                 }
-            }           
+            }
+
+            File.WriteAllText("C:/Users/DissTract/Downloads/SearchTerms.txt", string.Format("Game Title: {0}, Game Link: {1}", GameTitles[0], ForumLinks[0]));
         }
 
         //Runs the prefetcher scraper
         public void RunPrefetchFirstPayload(string PrefetchScraperPath, string PrefetchOutputFile, string PrefetchType)
         {
             List<string> Arguments = new List<string>();
-            Arguments.Add(PrefetchOutputFile);
+            Arguments.Add(PrefetchOutputFile);    
 
             if (PrefetchType == "Binary")
             {
                 //Implement pre-fetch if binary                                
                 RunBinary(PrefetchScraperPath, Arguments);
 
-            }
-            else if(PrefetchType == "Python Binary")
-            {
-                string PrefetchCachePath = QueryPath + "Prefetch\\PrefetchCachePath.txt";
-
-                if (!Directory.Exists(QueryPath))
-                {
-                    Directory.CreateDirectory(QueryPath);
-                }
-                if (!Directory.Exists(QueryPath + "Prefetch\\"))
-                {
-                    Directory.CreateDirectory(QueryPath + "Prefetch\\");
-                }
-                string OutputDirectory = Path.GetDirectoryName(PrefetchOutputFile)!;
-
-                if (!Directory.Exists(OutputDirectory))
-                {
-                    Directory.CreateDirectory(OutputDirectory);
-                }
-
-                File.WriteAllText(PrefetchCachePath, PrefetchOutputFile);
-
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = PrefetchScraperPath;               
-                startInfo.UseShellExecute = false;
-                startInfo.CreateNoWindow = true;
-                startInfo.RedirectStandardOutput = true;
-                startInfo.RedirectStandardError = true;
-
-                using (Process process = Process.Start(startInfo))
-                {
-                    process.WaitForExit();
-                }
             }
         }
 
@@ -925,23 +935,10 @@ namespace Project_Black_Pearl
 
         }
 
-        //Executes Python Scripts
-        public void RunPythonScript(string ScriptPath, List<string> Args)
-        {
-            ScriptRuntimeSetup setup = Python.CreateRuntimeSetup(null);
-            ScriptRuntime runtime = new ScriptRuntime(setup);
-            ScriptEngine engine = Python.GetEngine(runtime);
-            ScriptSource source = engine.CreateScriptSourceFromFile(ScriptPath);
-            ScriptScope scope = engine.CreateScope();
-
-            
-
-            source.Execute(scope);
-        }
-
         //Executes a binary file
         public void RunBinary(string BinaryPath, List<string> Args)
         {
+            
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = true;
             startInfo.FileName = BinaryPath;
@@ -951,17 +948,10 @@ namespace Project_Black_Pearl
                 startInfo.ArgumentList.Add(Argument);
             }
 
-            try
-            {
-                using (Process process = Process.Start(startInfo))
-                {
-                    process.WaitForExit();
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Scraper error");
-            }
+            File.WriteAllText("C:/Users/DissTract/Downloads/CrashReason.txt", string.Format("Binary path: {0}\nFirst Argument: {1}\nSecond Argument: {2}\n Third Argument: {3}\n Fourth Argument: {4} ", BinaryPath, Args[0], Args[1], Args[2], Args[3]));
+
+            Process.Start(startInfo);
+            
         }
 
         //Loads all the installed plugins
@@ -984,6 +974,8 @@ namespace Project_Black_Pearl
 
                 string ScraperOutputFile = plugin.Title + "_cache.json";
                 ScraperOutputFiles.Add(ScraperOutputFile);
+
+                DirectoryCreator(ScraperOutputFolder);
 
                 if (File.Exists(ScraperOutputFile))
                 {

@@ -1,0 +1,35 @@
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.exe
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.deps.json
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.runtimeconfig.json
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.pdb
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\IronPython.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Scripting.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.SDK.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.SDK.pdb
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.AssemblyReference.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Interop.Scripting.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.ResolveComReference.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.Add_Game_Screen.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.CustomizableTextBox.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DLMethodPanel.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DownloadPanel.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DownloadsPage.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DownloadsPageDetails.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.EditGameScreen.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.GameLibraryDisplayPanel.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.GamesDisplayContainer.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.LauncherForm.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.Library.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.PreferencesScreen.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.GenerateResource.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.AssemblyInfoInputs.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.AssemblyInfo.cs
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.CoreCompileInputs.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.CopyComplete
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\refint\Project Black Pearl.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.pdb
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.genruntimeconfig.cache
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\ref\Project Black Pearl.dll

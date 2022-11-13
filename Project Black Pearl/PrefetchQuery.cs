@@ -14,6 +14,6 @@ namespace Project_Black_Pearl
     public class PrefetchEntry
     {
         public string Title { get; set; }
-        public string URI { get; set; }
+        public string URL { get; set; }
     }
 }

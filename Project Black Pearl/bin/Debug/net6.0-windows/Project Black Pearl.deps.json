@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Project Black Pearl/1.0.0": {
+        "dependencies": {
+          "IronPython": "3.4.0.0",
+          "Microsoft.Scripting": "1.3.2.0",
+          "Project Black Pearl.SDK.Reference": "1.0.0.0"
+        },
+        "runtime": {
+          "Project Black Pearl.dll": {}
+        }
+      },
+      "IronPython/3.4.0.0": {
+        "runtime": {
+          "IronPython.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.10"
+          }
+        }
+      },
+      "Microsoft.Scripting/1.3.2.0": {
+        "runtime": {
+          "Microsoft.Scripting.dll": {
+            "assemblyVersion": "1.3.2.0",
+            "fileVersion": "1.3.2.1000"
+          }
+        }
+      },
+      "Project Black Pearl.SDK.Reference/1.0.0.0": {
+        "runtime": {
+          "Project Black Pearl.SDK.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Project Black Pearl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IronPython/3.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Scripting/1.3.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project Black Pearl.SDK.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DissTract\\Documents\\GitHub\\Project-Black-Pearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj": {}
+    "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DissTract\\Documents\\GitHub\\Project-Black-Pearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj": {
+    "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DissTract\\Documents\\GitHub\\Project-Black-Pearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj",
+        "projectUniqueName": "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj",
         "projectName": "Project Black Pearl.SDK",
-        "projectPath": "C:\\Users\\DissTract\\Documents\\GitHub\\Project-Black-Pearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj",
+        "projectPath": "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl.SDK\\Project Black Pearl.SDK.csproj",
         "packagesPath": "C:\\Users\\DissTract\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DissTract\\Documents\\GitHub\\Project-Black-Pearl\\Project Black Pearl.SDK\\obj\\",
+        "outputPath": "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl.SDK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
