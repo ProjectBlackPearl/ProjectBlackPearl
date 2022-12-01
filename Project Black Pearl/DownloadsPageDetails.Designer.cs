@@ -77,7 +77,6 @@
             // 
             this.DLMethod1.AvailabilityIndex = true;
             this.DLMethod1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.DLMethod1.DLMethodIndex = 1;
             this.DLMethod1.DownloadURI = new List<string>();
             this.DLMethod1.Location = new System.Drawing.Point(45, 359);
             this.DLMethod1.Name = "DLMethod1";
@@ -88,7 +87,6 @@
             // 
             this.DLMethod3.AvailabilityIndex = true;
             this.DLMethod3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.DLMethod3.DLMethodIndex = 3;
             this.DLMethod3.DownloadURI = new List<string>();
             this.DLMethod3.Location = new System.Drawing.Point(45, 467);
             this.DLMethod3.Name = "DLMethod3";
@@ -99,7 +97,6 @@
             // 
             this.DLMethod4.AvailabilityIndex = false;
             this.DLMethod4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.DLMethod4.DLMethodIndex = 4;
             this.DLMethod4.DownloadURI = new List<string>();
             this.DLMethod4.Location = new System.Drawing.Point(514, 467);
             this.DLMethod4.Name = "DLMethod4";
@@ -110,7 +107,6 @@
             // 
             this.DLMethod2.AvailabilityIndex = true;
             this.DLMethod2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.DLMethod2.DLMethodIndex = 2;
             this.DLMethod2.DownloadURI = new List<string>();
             this.DLMethod2.Location = new System.Drawing.Point(514, 359);
             this.DLMethod2.Name = "DLMethod2";

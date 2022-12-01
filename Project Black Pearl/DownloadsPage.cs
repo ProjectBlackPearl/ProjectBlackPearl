@@ -13,10 +13,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
-using Microsoft.Scripting;
-using static IronPython.Modules._ast;
 using System.Reflection.Emit;
 using System.Security.Policy;
 
@@ -148,6 +144,11 @@ namespace Project_Black_Pearl
 
         public bool DoneWithCombining = false;
 
+        public string URL1ImagePathPub = " ";
+        public string URL2ImagePathPub = " ";
+        public string URL3ImagePathPub = " ";
+        public string URL4ImagePathPub = " ";
+
         //Sets the UI's color
         [Category("Config")]
         public Color UIColor
@@ -239,6 +240,16 @@ namespace Project_Black_Pearl
                     string PostFetchType = ScraperTypes[FilterIdx];
                     string TempPrefetchFolder = PrefetchTempFolders[FilterIdx];
 
+                    string URL1ImagePath = URL1Images[FilterIdx];
+                    string URL2ImagePath = URL2Images[FilterIdx];
+                    string URL3ImagePath = URL3Images[FilterIdx];
+                    string URL4ImagePath = URL4Images[FilterIdx];
+
+                    URL1ImagePathPub = URL1ImagePath;
+                    URL2ImagePathPub = URL2ImagePath;
+                    URL3ImagePathPub = URL3ImagePath;
+                    URL4ImagePathPub = URL4ImagePath;
+
                     DirectoryCreator(PrefetchQueryPath0);
                     DirectoryCleaner(PrefetchQueryPath0);
 
@@ -270,7 +281,12 @@ namespace Project_Black_Pearl
                     }
 
                     RunPostfetchScraper(query, PrecacheFile, PostFetchScraper, OutputFile, PostFetchType, TempPrefetchFolder);
-                    RetrievePrefetchResults(OutputFile);
+                  
+                    Thread RetrieverThread = new Thread(() => RetrievePrefetchResults(OutputFile));
+                    RetrieverThread.IsBackground = true;
+                    RetrieverThread.Start();
+
+                    //RetrievePrefetchResults(OutputFile);
                 }
                 else
                 {
@@ -278,6 +294,11 @@ namespace Project_Black_Pearl
                     string OutputFile = OutputFolder + ScraperOutputFiles[FilterIdx];
                     string ScraperType = ScraperTypes[FilterIdx];
                     string ScraperToUsePath = ScraperPaths[FilterIdx];
+
+                    string URL1ImagePath = URL1Images[FilterIdx];
+                    string URL2ImagePath = URL2Images[FilterIdx];
+                    string URL3ImagePath = URL3Images[FilterIdx];
+                    string URL4ImagePath = URL4Images[FilterIdx];
 
                     RunNonPrefetchScraper(OutputFolder, OutputFile, query, ScraperType, ScraperToUsePath);
                     RetrieveNonPrefetchResults(OutputFile);
@@ -778,115 +799,115 @@ namespace Project_Black_Pearl
                     switch (AmountOfGames)
                     {
                         case 0:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = false;
-                            DLPanel3.Visible = false;
-                            DLPanel4.Visible = false;
-                            DLPanel5.Visible = false;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = false;
+                            DLPanel3.Visibility = false;
+                            DLPanel4.Visibility = false;
+                            DLPanel5.Visibility = false;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = true;
-                            Info2.Visible = false;
-                            Info3.Visible = false;
-                            Info4.Visible = false;
-                            Info5.Visible = false;
-                            Info6.Visible = false;
+                            Info1.Visibility = true;
+                            Info2.Visibility = false;
+                            Info3.Visibility = false;
+                            Info4.Visibility = false;
+                            Info5.Visibility = false;
+                            Info6.Visibility = false;
 
                             break;
                         case 1:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = true;
-                            DLPanel3.Visible = false;
-                            DLPanel4.Visible = false;
-                            DLPanel5.Visible = false;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = true;
+                            DLPanel3.Visibility = false;
+                            DLPanel4.Visibility = false;
+                            DLPanel5.Visibility = false;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = true;
-                            Info2.Visible = true;
-                            Info3.Visible = false;
-                            Info4.Visible = false;
-                            Info5.Visible = false;
-                            Info6.Visible = false;
+                            Info1.Visibility = true;
+                            Info2.Visibility = true;
+                            Info3.Visibility = false;
+                            Info4.Visibility = false;
+                            Info5.Visibility = false;
+                            Info6.Visibility = false;
 
                             break;
                         case 2:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = true;
-                            DLPanel3.Visible = true;
-                            DLPanel4.Visible = false;
-                            DLPanel5.Visible = false;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = true;
+                            DLPanel3.Visibility = true;
+                            DLPanel4.Visibility = false;
+                            DLPanel5.Visibility = false;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = true;
-                            Info2.Visible = true;
-                            Info3.Visible = true;
-                            Info4.Visible = false;
-                            Info5.Visible = false;
-                            Info6.Visible = false;
+                            Info1.Visibility = true;
+                            Info2.Visibility = true;
+                            Info3.Visibility = true;
+                            Info4.Visibility = false;
+                            Info5.Visibility = false;
+                            Info6.Visibility = false;
 
                             break;
                         case 3:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = true;
-                            DLPanel3.Visible = true;
-                            DLPanel4.Visible = true;
-                            DLPanel5.Visible = false;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = true;
+                            DLPanel3.Visibility = true;
+                            DLPanel4.Visibility = true;
+                            DLPanel5.Visibility = false;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = true;
-                            Info2.Visible = true;
-                            Info3.Visible = true;
-                            Info4.Visible = true;
-                            Info5.Visible = false;
-                            Info6.Visible = false;
+                            Info1.Visibility = true;
+                            Info2.Visibility = true;
+                            Info3.Visibility = true;
+                            Info4.Visibility = true;
+                            Info5.Visibility = false;
+                            Info6.Visibility = false;
 
                             break;
                         case 4:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = true;
-                            DLPanel3.Visible = true;
-                            DLPanel4.Visible = true;
-                            DLPanel5.Visible = true;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = true;
+                            DLPanel3.Visibility = true;
+                            DLPanel4.Visibility = true;
+                            DLPanel5.Visibility = true;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = true;
-                            Info2.Visible = true;
-                            Info3.Visible = true;
-                            Info4.Visible = true;
-                            Info5.Visible = true;
-                            Info6.Visible = false;
+                            Info1.Visibility = true;
+                            Info2.Visibility = true;
+                            Info3.Visibility = true;
+                            Info4.Visibility = true;
+                            Info5.Visibility = true;
+                            Info6.Visibility = false;
 
                             break;
                         case 5:
-                            DLPanel1.Visible = true;
-                            DLPanel2.Visible = true;
-                            DLPanel3.Visible = true;
-                            DLPanel4.Visible = true;
-                            DLPanel5.Visible = true;
-                            DLPanel6.Visible = true;
+                            DLPanel1.Visibility = true;
+                            DLPanel2.Visibility = true;
+                            DLPanel3.Visibility = true;
+                            DLPanel4.Visibility = true;
+                            DLPanel5.Visibility = true;
+                            DLPanel6.Visibility = true;
 
-                            Info1.Visible = true;
-                            Info2.Visible = true;
-                            Info3.Visible = true;
-                            Info4.Visible = true;
-                            Info5.Visible = true;
-                            Info6.Visible = true;
+                            Info1.Visibility = true;
+                            Info2.Visibility = true;
+                            Info3.Visibility = true;
+                            Info4.Visibility = true;
+                            Info5.Visibility = true;
+                            Info6.Visibility = true;
 
                             break;
                         default:
-                            DLPanel1.Visible = false;
-                            DLPanel2.Visible = false;
-                            DLPanel3.Visible = false;
-                            DLPanel4.Visible = false;
-                            DLPanel5.Visible = false;
-                            DLPanel6.Visible = false;
+                            DLPanel1.Visibility = false;
+                            DLPanel2.Visibility = false;
+                            DLPanel3.Visibility = false;
+                            DLPanel4.Visibility = false;
+                            DLPanel5.Visibility = false;
+                            DLPanel6.Visibility = false;
 
-                            Info1.Visible = false;
-                            Info2.Visible = false;
-                            Info3.Visible = false;
-                            Info4.Visible = false;
-                            Info5.Visible = false;
-                            Info6.Visible = false;
+                            Info1.Visibility = false;
+                            Info2.Visibility = false;
+                            Info3.Visibility = false;
+                            Info4.Visibility = false;
+                            Info5.Visibility = false;
+                            Info6.Visibility = false;
 
                             break;
                     }
@@ -899,26 +920,50 @@ namespace Project_Black_Pearl
                         if (idx == 0)
                         {
                             DLPanel1.GameName = resultObj.Title.ToString();
+                            DLPanel1.URL1 = resultObj.URL1;
+                            DLPanel1.URL2 = resultObj.URL2;
+                            DLPanel1.URL3 = resultObj.URL3;
+                            DLPanel1.URL4 = resultObj.URL4;
                         }
                         else if (idx == 1)
                         {
                             DLPanel2.GameName = resultObj.Title.ToString();
+                            DLPanel2.URL1 = resultObj.URL1;
+                            DLPanel2.URL2 = resultObj.URL2;
+                            DLPanel2.URL3 = resultObj.URL3;
+                            DLPanel2.URL4 = resultObj.URL4;
                         }
                         else if (idx == 2)
                         {
                             DLPanel3.GameName = resultObj.Title.ToString();
+                            DLPanel3.URL1 = resultObj.URL1;
+                            DLPanel3.URL2 = resultObj.URL2;
+                            DLPanel3.URL3 = resultObj.URL3;
+                            DLPanel3.URL4 = resultObj.URL4;
                         }
                         else if (idx == 3)
                         {
                             DLPanel4.GameName = resultObj.Title.ToString();
+                            DLPanel4.URL1 = resultObj.URL1;
+                            DLPanel4.URL2 = resultObj.URL2;
+                            DLPanel4.URL3 = resultObj.URL3;
+                            DLPanel4.URL4 = resultObj.URL4;
                         }
                         else if (idx == 4)
                         {
                             DLPanel5.GameName = resultObj.Title.ToString();
+                            DLPanel5.URL1 = resultObj.URL1;
+                            DLPanel5.URL2 = resultObj.URL2;
+                            DLPanel5.URL3 = resultObj.URL3;
+                            DLPanel5.URL4 = resultObj.URL4;
                         }
                         else if (idx == 5)
                         {
                             DLPanel6.GameName = resultObj.Title.ToString();
+                            DLPanel6.URL1 = resultObj.URL1;
+                            DLPanel6.URL2 = resultObj.URL2;
+                            DLPanel6.URL3 = resultObj.URL3;
+                            DLPanel6.URL4 = resultObj.URL4;
                         }
                     }           
                 }
@@ -948,7 +993,7 @@ namespace Project_Black_Pearl
                 startInfo.ArgumentList.Add(Argument);
             }
 
-            File.WriteAllText("C:/Users/DissTract/Downloads/CrashReason.txt", string.Format("Binary path: {0}\nFirst Argument: {1}\nSecond Argument: {2}\n Third Argument: {3}\n Fourth Argument: {4} ", BinaryPath, Args[0], Args[1], Args[2], Args[3]));
+            //File.WriteAllText("C:/Users/DissTract/Downloads/CrashReason.txt", string.Format("Binary path: {0}\nFirst Argument: {1}\nSecond Argument: {2}\n Third Argument: {3}\n Fourth Argument: {4} ", BinaryPath, Args[0], Args[1], Args[2], Args[3]));
 
             Process.Start(startInfo);
             
@@ -1042,6 +1087,16 @@ namespace Project_Black_Pearl
             PageDetails1.Method3URL = DLPanel1.URL3;
             PageDetails1.Method4URL = DLPanel1.URL4;
 
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
+
+            PageDetails1.Method1Image = URL1ImagePathPub;
+            PageDetails1.Method2Image = URL2ImagePathPub;
+            PageDetails1.Method3Image = URL3ImagePathPub;
+            PageDetails1.Method4Image = URL4ImagePathPub;
+
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();
         }
@@ -1056,6 +1111,11 @@ namespace Project_Black_Pearl
             PageDetails1.Method2URL = DLPanel2.URL2;
             PageDetails1.Method3URL = DLPanel2.URL3;
             PageDetails1.Method4URL = DLPanel2.URL4;
+
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
 
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();
@@ -1072,6 +1132,11 @@ namespace Project_Black_Pearl
             PageDetails1.Method3URL = DLPanel3.URL3;
             PageDetails1.Method4URL = DLPanel3.URL4;
 
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
+
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();
         }
@@ -1086,6 +1151,11 @@ namespace Project_Black_Pearl
             PageDetails1.Method2URL = DLPanel4.URL2;
             PageDetails1.Method3URL = DLPanel4.URL3;
             PageDetails1.Method4URL = DLPanel4.URL4;
+
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
 
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();
@@ -1102,6 +1172,11 @@ namespace Project_Black_Pearl
             PageDetails1.Method3URL = DLPanel5.URL3;
             PageDetails1.Method4URL = DLPanel5.URL4;
 
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
+
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();
         }
@@ -1116,6 +1191,11 @@ namespace Project_Black_Pearl
             PageDetails1.Method2URL = DLPanel6.URL2;
             PageDetails1.Method3URL = DLPanel6.URL3;
             PageDetails1.Method4URL = DLPanel6.URL4;
+
+            PageDetails1.Method1Name = "Torrent";
+            PageDetails1.Method2Name = "MultiUP";
+            PageDetails1.Method3Name = "Zippyshare";
+            PageDetails1.Method4Name = "OneFichier";
 
             PageDetails1.Visible = true;
             PageDetails1.BringToFront();

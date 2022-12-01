@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "VIDgK4yz0IPUnCGbaFgUf3eSte0d3QEg6Ng4Ua1B4YM+pfS6w7snmeU4AotT/bmLpOzAAfWnXlVvvo7JItfi/g==",
+  "dgSpecHash": "rEBc/NkiFc1DPL/2mLExcLwEr9rUGCGTSuWT2poA/RZSgLJX2MANLiRy7VQNivWHZEnZQ2DYo24BWy3fVXDitA==",
   "success": true,
   "projectFilePath": "C:\\Users\\DissTract\\Documents\\GitHub\\PBP\\ProjectBlackPearl\\Project Black Pearl\\Project Black Pearl.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DissTract\\.nuget\\packages\\downloader\\3.0.1\\downloader.3.0.1.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\octaneenginecore\\3.1.0\\octaneenginecore.3.1.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\DissTract\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

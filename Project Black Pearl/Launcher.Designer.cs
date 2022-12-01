@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LauncherForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DownloadsSideBTN2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PreferencesBtn = new System.Windows.Forms.Button();
-            this.DownloadsSideBTN = new System.Windows.Forms.Button();
+            this.BrowseSideBTN = new System.Windows.Forms.Button();
             this.LibrarySideBTN = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.DraggablePanel = new System.Windows.Forms.Panel();
@@ -43,6 +44,7 @@
             this.DownloadsPage = new Project_Black_Pearl.DownloadsPage();
             this.PreferencesScreen = new Project_Black_Pearl.PreferencesScreen();
             this.preferencesScreen1 = new Project_Black_Pearl.PreferencesScreen();
+            this.DLManager = new Project_Black_Pearl.DLManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DraggablePanel.SuspendLayout();
@@ -51,16 +53,31 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel1.Controls.Add(this.DownloadsSideBTN2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.PreferencesBtn);
-            this.panel1.Controls.Add(this.DownloadsSideBTN);
+            this.panel1.Controls.Add(this.BrowseSideBTN);
             this.panel1.Controls.Add(this.LibrarySideBTN);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 645);
             this.panel1.TabIndex = 0;
+            // 
+            // DownloadsSideBTN2
+            // 
+            this.DownloadsSideBTN2.FlatAppearance.BorderSize = 0;
+            this.DownloadsSideBTN2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DownloadsSideBTN2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DownloadsSideBTN2.ForeColor = System.Drawing.Color.White;
+            this.DownloadsSideBTN2.Location = new System.Drawing.Point(10, 230);
+            this.DownloadsSideBTN2.Name = "DownloadsSideBTN2";
+            this.DownloadsSideBTN2.Size = new System.Drawing.Size(210, 60);
+            this.DownloadsSideBTN2.TabIndex = 8;
+            this.DownloadsSideBTN2.Text = "Downloads";
+            this.DownloadsSideBTN2.UseVisualStyleBackColor = true;
+            this.DownloadsSideBTN2.Click += new System.EventHandler(this.DownloadsSideBTN2_Click);
             // 
             // label1
             // 
@@ -96,19 +113,19 @@
             this.PreferencesBtn.UseVisualStyleBackColor = true;
             this.PreferencesBtn.Click += new System.EventHandler(this.PreferencesBtn_Click);
             // 
-            // DownloadsSideBTN
+            // BrowseSideBTN
             // 
-            this.DownloadsSideBTN.FlatAppearance.BorderSize = 0;
-            this.DownloadsSideBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownloadsSideBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DownloadsSideBTN.ForeColor = System.Drawing.Color.White;
-            this.DownloadsSideBTN.Location = new System.Drawing.Point(10, 164);
-            this.DownloadsSideBTN.Name = "DownloadsSideBTN";
-            this.DownloadsSideBTN.Size = new System.Drawing.Size(210, 60);
-            this.DownloadsSideBTN.TabIndex = 4;
-            this.DownloadsSideBTN.Text = "Browse";
-            this.DownloadsSideBTN.UseVisualStyleBackColor = true;
-            this.DownloadsSideBTN.Click += new System.EventHandler(this.button1_Click);
+            this.BrowseSideBTN.FlatAppearance.BorderSize = 0;
+            this.BrowseSideBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BrowseSideBTN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BrowseSideBTN.ForeColor = System.Drawing.Color.White;
+            this.BrowseSideBTN.Location = new System.Drawing.Point(10, 164);
+            this.BrowseSideBTN.Name = "BrowseSideBTN";
+            this.BrowseSideBTN.Size = new System.Drawing.Size(210, 60);
+            this.BrowseSideBTN.TabIndex = 4;
+            this.BrowseSideBTN.Text = "Browse";
+            this.BrowseSideBTN.UseVisualStyleBackColor = true;
+            this.BrowseSideBTN.Click += new System.EventHandler(this.button1_Click);
             // 
             // LibrarySideBTN
             // 
@@ -202,12 +219,23 @@
             this.preferencesScreen1.TabIndex = 4;
             this.preferencesScreen1.Visible = false;
             // 
+            // DLManager
+            // 
+            this.DLManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.DLManager.DownloadURLs = ((System.Collections.Generic.List<string>)(resources.GetObject("DLManager.DownloadURLs")));
+            this.DLManager.GameName = "";
+            this.DLManager.Location = new System.Drawing.Point(221, 45);
+            this.DLManager.Name = "DLManager";
+            this.DLManager.Size = new System.Drawing.Size(993, 586);
+            this.DLManager.TabIndex = 5;
+            // 
             // LauncherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1218, 644);
+            this.Controls.Add(this.DLManager);
             this.Controls.Add(this.preferencesScreen1);
             this.Controls.Add(this.DownloadsPage);
             this.Controls.Add(this.panel1);
@@ -232,7 +260,7 @@
         private Panel DraggablePanel;
         private Button ShutDownBTN;
         private Button MinimizeBTN;
-        private Button DownloadsSideBTN;
+        private Button BrowseSideBTN;
         private Library LibraryScreen;
         private DownloadsPage DownloadsPage;
         private PreferencesScreen PreferencesScreen;
@@ -240,5 +268,7 @@
         private PreferencesScreen preferencesScreen1;
         private PictureBox pictureBox1;
         private Label label1;
+        private Button DownloadsSideBTN2;
+        private DLManager DLManager;
     }
 }

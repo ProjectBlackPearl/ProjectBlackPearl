@@ -98,6 +98,29 @@ namespace Project_Black_Pearl
             DLMethod1.DownloadURI = URL;
         }
 
+        //Sets Download Method 1's Name
+        [Category("Data")]
+        public string Method1Name
+        {
+            get { return DLMethod1.MethodName; }
+            set { SetMethod1DL(value); }
+        }
+        public void SetMethod1DL(string Name)
+        {
+            DLMethod1.MethodName = Name;
+        }
+
+        [Category("Data")]
+        public string Method1Image
+        {
+            get { return DLMethod1.ImageToDisplay; }
+            set { SetMethod1Image(value); }
+        }
+        public void SetMethod1Image(string Path)
+        {
+            DLMethod1.ImageToDisplay = Path;
+        }
+
         //Sets Download Method 2's URL
         [Category("Data")]
         public List<string> Method2URL
@@ -108,6 +131,29 @@ namespace Project_Black_Pearl
         public void SetDL2(List<string> URL)
         {
             DLMethod2.DownloadURI = URL;
+        }
+
+        //Sets Download Method 2's Name
+        [Category("Data")]
+        public string Method2Name
+        {
+            get { return DLMethod2.MethodName; }
+            set { SetMethod2DL(value); }
+        }
+        public void SetMethod2DL(string Name)
+        {
+            DLMethod2.MethodName = Name;
+        }
+
+        [Category("Data")]
+        public string Method2Image
+        {
+            get { return DLMethod2.ImageToDisplay; }
+            set { SetMethod2Image(value); }
+        }
+        public void SetMethod2Image(string Path)
+        {
+            DLMethod2.ImageToDisplay = Path;
         }
 
         //Sets Download Method 3's URL
@@ -122,6 +168,29 @@ namespace Project_Black_Pearl
             DLMethod3.DownloadURI = URL;
         }
 
+        //Sets Download Method 3's Name
+        [Category("Data")]
+        public string Method3Name
+        {
+            get { return DLMethod3.MethodName; }
+            set { SetMethod3DL(value); }
+        }
+        public void SetMethod3DL(string Name)
+        {
+            DLMethod3.MethodName = Name;
+        }
+
+        [Category("Data")]
+        public string Method3Image
+        {
+            get { return DLMethod3.ImageToDisplay; }
+            set { SetMethod3Image(value); }
+        }
+        public void SetMethod3Image(string Path)
+        {
+            DLMethod3.ImageToDisplay = Path;
+        }
+
         //Sets Download Method 4's URL
         [Category("Data")]
         public List<string> Method4URL
@@ -134,6 +203,28 @@ namespace Project_Black_Pearl
             DLMethod4.DownloadURI = URL;
         }
 
+        //Sets Download Method 4's Name
+        [Category("Data")]
+        public string Method4Name
+        {
+            get { return DLMethod4.MethodName; }
+            set { SetMethod4DL(value); }
+        }
+        public void SetMethod4DL(string Name)
+        {
+            DLMethod4.MethodName = Name;
+        }
+
+        [Category("Data")]
+        public string Method4Image
+        {
+            get { return DLMethod4.ImageToDisplay; }
+            set { SetMethod4Image(value); }
+        }
+        public void SetMethod4Image(string Path)
+        {
+            DLMethod4.ImageToDisplay = Path;
+        }
 
         //Makes the page invisible
         private void PreviousPageButton_Click(object sender, EventArgs e)

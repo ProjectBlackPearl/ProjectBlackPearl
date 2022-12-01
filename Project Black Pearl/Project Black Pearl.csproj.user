@@ -11,6 +11,12 @@
     <Compile Update="CustomizableTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DLManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DLManagerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="DLMethodPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

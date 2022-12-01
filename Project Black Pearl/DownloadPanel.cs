@@ -27,7 +27,18 @@ namespace Project_Black_Pearl
         }
         public void SetGameName(string GameName)
         {
-            NameLabel.Text = GamesDisplayContainer.ShortenStrings(GameName, 64); 
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(
+                    delegate ()
+                    {
+                        NameLabel.Text = GamesDisplayContainer.ShortenStrings(GameName, 64);
+                    }));
+            }
+            else
+            {
+                NameLabel.Text = GamesDisplayContainer.ShortenStrings(GameName, 64);
+            }
         }
         public string GetGameName()
         {
@@ -130,6 +141,30 @@ namespace Project_Black_Pearl
         public void SetURL4(List<string> URL)
         {
             URL4 = URL;
+        }
+
+        [Category("Panel")]
+        public bool Visibility
+        {
+            get { return this.Visible; }
+            set { SetVisibility(value); }
+        }
+        
+        public void SetVisibility(bool Visibility)
+        {
+
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(
+                    delegate ()
+                    {
+                        this.Visible = Visibility;
+                    }));
+            }
+            else
+            {
+                this.Visible = Visibility;
+            }
         }
     }
 }

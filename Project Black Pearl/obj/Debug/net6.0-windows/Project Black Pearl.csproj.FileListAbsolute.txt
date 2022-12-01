@@ -3,8 +3,6 @@ C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bi
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.runtimeconfig.json
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.dll
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.pdb
-C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\IronPython.dll
-C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Scripting.dll
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.SDK.dll
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Project Black Pearl.SDK.pdb
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.csproj.AssemblyReference.cache
@@ -33,3 +31,19 @@ C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\ob
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.pdb
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project Black Pearl.genruntimeconfig.cache
 C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\ref\Project Black Pearl.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.Properties.Resources.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Downloader.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DLManager.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\obj\Debug\net6.0-windows\Project_Black_Pearl.DLManagerPanel.resources
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\OctaneEngineCore.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Serilog.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Serilog.Extensions.Logging.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Serilog.Sinks.Console.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\Serilog.Sinks.File.dll
+C:\Users\DissTract\Documents\GitHub\PBP\ProjectBlackPearl\Project Black Pearl\bin\Debug\net6.0-windows\System.Reactive.dll

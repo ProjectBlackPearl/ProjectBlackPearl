@@ -15,9 +15,9 @@ namespace Project_Black_Pearl
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
         //Creates rounded corners for the Winform
@@ -66,6 +66,12 @@ namespace Project_Black_Pearl
             Thread UIUpdater = new Thread(new ThreadStart(RefreshColors));
             UIUpdater.IsBackground = true;
             UIUpdater.Start();
+
+            List<string> EK = new List<string>();
+            EK.Add("https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso");
+
+            DLManager.DownloadURLs = EK;
+            DLManager.GameName = "Tekken 7";
         }
 
         //Invokable method on mousedown to make the pannel draggable (And thus the whole application)
@@ -98,6 +104,7 @@ namespace Project_Black_Pearl
 
             DownloadsPage.Visible = false;
             PreferencesScreen.Visible = false;
+            DLManager.Visible = false;
 
             LibraryScreen.Visible = true;
             LibraryScreen.BringToFront();
@@ -105,11 +112,12 @@ namespace Project_Black_Pearl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = DownloadsSideBTN.Height - 1;
-            SidePanel.Top = DownloadsSideBTN.Top;
+            SidePanel.Height = BrowseSideBTN.Height - 1;
+            SidePanel.Top = BrowseSideBTN.Top;
 
             LibraryScreen.Visible = false;
             PreferencesScreen.Visible = false;
+            DLManager.Visible = false;
 
             DownloadsPage.Visible = true;
             DownloadsPage.BringToFront();
@@ -122,6 +130,7 @@ namespace Project_Black_Pearl
 
             LibraryScreen.Visible = false;
             DownloadsPage.Visible = false;
+            DLManager.Visible = false;
 
             preferencesScreen1.Visible = true;
             preferencesScreen1.BringToFront();
@@ -146,8 +155,20 @@ namespace Project_Black_Pearl
             LibraryScreen.UIColor = AccentColor;
             DownloadsPage.UIColor = AccentColor;
 
-            Thread.Sleep(100);
+            Thread.Sleep(1000);
             RefreshColors();
+        }
+
+        private void DownloadsSideBTN2_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = DownloadsSideBTN2.Height - 1;
+            SidePanel.Top = DownloadsSideBTN2.Top;
+
+            LibraryScreen.Visible = false;
+            DownloadsPage.Visible = false;
+            preferencesScreen1.Visible = false;
+
+            DLManager.Visible = true;
         }
     }
     

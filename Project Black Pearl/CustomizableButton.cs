@@ -78,6 +78,30 @@ namespace Project_Black_Pearl
             set { this.ForeColor = value; }
         }
 
+        [Category("Customizable Button")]
+        public bool Visibility
+        {
+            get { return this.Visible; }
+            set { SetVisibility(value); }
+        }
+
+        public void SetVisibility(bool Visibility)
+        {
+
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(
+                    delegate ()
+                    {
+                        this.Visible = Visibility;
+                    }));
+            }
+            else
+            {
+                this.Visible = Visibility;
+            }
+        }
+
         //Constructor
         public CustomizableButton()
         {
@@ -165,6 +189,5 @@ namespace Project_Black_Pearl
             if (borderRadius > this.Height)
                 BorderRadius = this.Height;
         }
-
     }
 }

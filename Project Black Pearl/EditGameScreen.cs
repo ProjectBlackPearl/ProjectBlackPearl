@@ -389,7 +389,7 @@ namespace Project_Black_Pearl
         }
 
         //Used to resize the image to fit the picturebox
-        private static Image resizeImage(Image imgToResize, Size size)
+        public static Image resizeImage(Image imgToResize, Size size)
         {
             //Get the image current width  
             int sourceWidth = imgToResize.Width;
