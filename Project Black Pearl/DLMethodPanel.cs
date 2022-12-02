@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +16,10 @@ namespace Project_Black_Pearl
 {
     public partial class DLMethodPanel : UserControl
     {
+        public static string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        public static string pbpPath = Path.Combine(appdataPath, "Project Black Pearl");
+        public static string DownloadsPath = Path.Combine(pbpPath, "DownloadsInfo");
+
         public DLMethodPanel()
         {
             InitializeComponent();
@@ -72,6 +78,7 @@ namespace Project_Black_Pearl
         public void SetDLURI(List<string> DLURIsList)
         {
             DLUri = DLURIsList;
+            
             if(DLURIsList == null)
             {
                 SetAvailability(false);
@@ -119,7 +126,7 @@ namespace Project_Black_Pearl
 
                 SetDLLabelType(0);
                 DLTypeIndex = 0;
-            }
+            }         
         }
 
 
@@ -129,6 +136,21 @@ namespace Project_Black_Pearl
         {
             get { return ImagePath; }
             set { SetImagePath(value); }
+        }
+
+
+        [Category("Data")]
+        public string GameTitle = " ";
+        public string GameName
+        {
+            get { return Name; }
+            set { SetGameTitle(value); }
+        }
+
+
+        public void SetGameTitle(string Title)
+        {
+            GameTitle = Title;
         }
 
         public void SetImagePath(string Path)
@@ -209,6 +231,26 @@ namespace Project_Black_Pearl
             }
         }
 
+        public void AddDownload(List<string> URLtoAdd)
+        {
+            if (!Directory.Exists(DownloadsPath))
+            {
+                Directory.CreateDirectory(DownloadsPath);
+            }
+
+            DownloadsQueryClass DownloadsQuery = new DownloadsQueryClass();
+
+            DownloadsQuery.GameTitle = GameTitle;
+            DownloadsQuery.URLs = URLtoAdd;
+
+            int DLCount = Directory.EnumerateFiles(DownloadsPath, "*", SearchOption.TopDirectoryOnly).Count();
+            int FileIndex = DLCount + 1;
+            string filepath = Path.Combine(DownloadsPath, "DownloadQuery" + FileIndex.ToString() + ".json");
+
+            string jsonString = JsonSerializer.Serialize<DownloadsQueryClass>(DownloadsQuery);
+            File.WriteAllText(filepath, jsonString);
+        }
+
         //Copies the URI to Clipboard
         private void CopyClipboardBTN_Click(object sender, EventArgs e)
         {
@@ -239,12 +281,11 @@ namespace Project_Black_Pearl
             {
                 //Download in client
                 case 0:
-                    //Implement logic later
+                    AddDownload(DLUri);
                     break;
 
                 //Open in browser
                 case 1:
-
                     Process.Start(new ProcessStartInfo(DLUri[0]) { UseShellExecute = true });
                     break;
 

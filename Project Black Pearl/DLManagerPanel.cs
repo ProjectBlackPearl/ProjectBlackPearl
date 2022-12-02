@@ -50,18 +50,16 @@ namespace Project_Black_Pearl
 
 
         [Category("Download Info")]
-        public string DLURL = "";
-        public string DownloadURL
+        public List<string> DLURL = new List<string>();
+        public List<string> DownloadURL
         {
             get { return DLURL; }
             set { SetDLURL(value); }
         }
-        public void SetDLURL(string url)
+        public void SetDLURL(List<string> url)
         {
             DLURL = url;
         }
-
-
 
         [Category("Download Info")]
         public string TitleLabel = "";
@@ -73,9 +71,30 @@ namespace Project_Black_Pearl
         public void SetTitle(string Title)
         {
             TitleLabel = Title;
-            TitleLBL.Text = Title;
+
+            if (TitleLBL.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(
+                    delegate ()
+                    {
+                        TitleLBL.Text = Title;
+                    }));
+            }
+            else
+            {
+                TitleLBL.Text = Title;
+            }          
         }
 
+
+
+        [Category("Misc")]
+        public bool Viz = false;
+        public bool Vizibility
+        {
+            get { return Viz; }
+            set { SetVibisibility(value); }
+        }
 
         public DLManagerPanel()
         {
@@ -94,26 +113,35 @@ namespace Project_Black_Pearl
             SetStatusLabel("Download finished!");
         }
 
-
         private void StartBTN_Click(object sender, EventArgs e)
         {
-            if (DLURL != string.Empty && DLURL != " " && DLURL != null)
+            foreach(var url in DLURL)
             {
-                string filename = " ";
-
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.InitialDirectory = @"C:\";
-                saveFileDialog.Filter = "All files (*.*)|*.*";
-                saveFileDialog.RestoreDirectory = true;
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                if (url != string.Empty && url != " " && url != null)
                 {
-                    filename = saveFileDialog.FileName;
-                }
+                    string filename = " ";
 
-                Thread DLStart = new Thread(async () => await StartDownload(DLURL, factory, filename, config));
-                DLStart.Start();
-            }          
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.InitialDirectory = @"C:\";
+                    saveFileDialog.Filter = "All files (*.*)|*.*";
+                    saveFileDialog.RestoreDirectory = true;
+
+                    var choosestat = saveFileDialog.ShowDialog();
+
+                    if (choosestat == DialogResult.OK)
+                    {
+                        filename = saveFileDialog.FileName;
+
+                        Thread DLStart = new Thread(async () => await StartDownload(url, factory, filename, config));
+                        DLStart.IsBackground = true;
+                        DLStart.Start();
+                    }
+                    else if(choosestat == DialogResult.Cancel)
+                    {
+                        //Do nothing
+                    }                  
+                }
+            }   
         }
 
         public void SetStatusLabel(string Status)
@@ -129,6 +157,22 @@ namespace Project_Black_Pearl
             else
             {
                 StatusLBL.Text = Status;
+            }
+        }
+
+        public void SetVibisibility(bool viz)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(
+                    delegate ()
+                    {
+                        this.Visible = viz;
+                    }));
+            }
+            else
+            {
+                this.Visible = viz;
             }
         }
     }

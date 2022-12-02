@@ -222,8 +222,8 @@
             // DLManager
             // 
             this.DLManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.DLManager.DownloadURLs = ((System.Collections.Generic.List<string>)(resources.GetObject("DLManager.DownloadURLs")));
-            this.DLManager.GameName = "";
+            this.DLManager.DownloadURLs = new List<List<string>>();
+            this.DLManager.GameName = ((System.Collections.Generic.List<string>)(resources.GetObject("DLManager.GameName")));
             this.DLManager.Location = new System.Drawing.Point(221, 45);
             this.DLManager.Name = "DLManager";
             this.DLManager.Size = new System.Drawing.Size(993, 586);

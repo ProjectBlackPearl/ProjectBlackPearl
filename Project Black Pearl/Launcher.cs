@@ -1,15 +1,20 @@
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Text.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_Black_Pearl
 {
     public partial class LauncherForm : Form
     {
-        public static string systemPath = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        public static string systemPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         public static string completePath = Path.Combine(systemPath, "Project Black Pearl\\");
         public static string ConfigPath = completePath + "Config.json";
+        public static string DownloadsPath = Path.Combine(completePath, "DownloadsInfo");
 
         public Color AccentColor = Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+
+        public int PrevAmountGames = 0;
 
         //Makes the application draggable
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -67,11 +72,9 @@ namespace Project_Black_Pearl
             UIUpdater.IsBackground = true;
             UIUpdater.Start();
 
-            List<string> EK = new List<string>();
-            EK.Add("https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso");
-
-            DLManager.DownloadURLs = EK;
-            DLManager.GameName = "Tekken 7";
+            Thread DownloadsChecker = new Thread(new ThreadStart(CheckForNewDownload));
+            DownloadsChecker.IsBackground = true;
+            DownloadsChecker.Start();
         }
 
         //Invokable method on mousedown to make the pannel draggable (And thus the whole application)
@@ -82,6 +85,52 @@ namespace Project_Black_Pearl
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        public void CheckForNewDownload()
+        {
+            int DLCount = Directory.EnumerateFiles(DownloadsPath, "*", SearchOption.TopDirectoryOnly).Count();
+
+            if (DLCount > PrevAmountGames)
+            {
+                List<List<string>>  EK = DLManager.DownloadURLs; 
+                List<string> EG = DLManager.GameName;
+
+                string[] filePaths = Directory.GetFiles(DownloadsPath, "*.json",
+                                         SearchOption.TopDirectoryOnly);
+
+                string debugtxt = "";
+
+                foreach(string filePath in filePaths)
+                {
+                    string jsonString = File.ReadAllText(filePath);
+                    DownloadsQueryClass downloadsQuery = JsonSerializer.Deserialize<DownloadsQueryClass>(jsonString)!;
+
+                    EK.Add(downloadsQuery.URLs);
+                    EG.Add(downloadsQuery.GameTitle);       
+                }
+
+                foreach (var lst in EK)
+                {
+                    foreach(string link in lst)
+                    {
+                        debugtxt += link;
+                    }                  
+                }
+
+                DLManager.DownloadURLs = EK;
+                DLManager.GameName = EG;
+
+                PrevAmountGames = DLCount;
+
+                Thread.Sleep(3000);
+                CheckForNewDownload();
+            }
+            else
+            {
+                Thread.Sleep(3000);
+                CheckForNewDownload();
+            }            
         }
 
         //Exits the app on button click

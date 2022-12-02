@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DLManager));
             this.dlManagerPanel1 = new Project_Black_Pearl.DLManagerPanel();
             this.dlManagerPanel2 = new Project_Black_Pearl.DLManagerPanel();
             this.dlManagerPanel3 = new Project_Black_Pearl.DLManagerPanel();
@@ -40,7 +41,7 @@
             // dlManagerPanel1
             // 
             this.dlManagerPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel1.DownloadURL = "";
+            this.dlManagerPanel1.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel1.DownloadURL")));
             this.dlManagerPanel1.Location = new System.Drawing.Point(16, 30);
             this.dlManagerPanel1.Name = "dlManagerPanel1";
             this.dlManagerPanel1.Size = new System.Drawing.Size(964, 70);
@@ -50,7 +51,7 @@
             // dlManagerPanel2
             // 
             this.dlManagerPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel2.DownloadURL = "";
+            this.dlManagerPanel2.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel2.DownloadURL")));
             this.dlManagerPanel2.Location = new System.Drawing.Point(16, 106);
             this.dlManagerPanel2.Name = "dlManagerPanel2";
             this.dlManagerPanel2.Size = new System.Drawing.Size(964, 70);
@@ -60,7 +61,7 @@
             // dlManagerPanel3
             // 
             this.dlManagerPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel3.DownloadURL = "";
+            this.dlManagerPanel3.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel3.DownloadURL")));
             this.dlManagerPanel3.Location = new System.Drawing.Point(16, 182);
             this.dlManagerPanel3.Name = "dlManagerPanel3";
             this.dlManagerPanel3.Size = new System.Drawing.Size(964, 70);
@@ -70,7 +71,7 @@
             // dlManagerPanel4
             // 
             this.dlManagerPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel4.DownloadURL = "";
+            this.dlManagerPanel4.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel4.DownloadURL")));
             this.dlManagerPanel4.Location = new System.Drawing.Point(16, 258);
             this.dlManagerPanel4.Name = "dlManagerPanel4";
             this.dlManagerPanel4.Size = new System.Drawing.Size(964, 70);
@@ -80,7 +81,7 @@
             // dlManagerPanel5
             // 
             this.dlManagerPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel5.DownloadURL = "";
+            this.dlManagerPanel5.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel5.DownloadURL")));
             this.dlManagerPanel5.Location = new System.Drawing.Point(16, 334);
             this.dlManagerPanel5.Name = "dlManagerPanel5";
             this.dlManagerPanel5.Size = new System.Drawing.Size(964, 70);
@@ -90,7 +91,7 @@
             // dlManagerPanel6
             // 
             this.dlManagerPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel6.DownloadURL = "";
+            this.dlManagerPanel6.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel6.DownloadURL")));
             this.dlManagerPanel6.Location = new System.Drawing.Point(16, 410);
             this.dlManagerPanel6.Name = "dlManagerPanel6";
             this.dlManagerPanel6.Size = new System.Drawing.Size(964, 70);
@@ -100,7 +101,7 @@
             // dlManagerPanel7
             // 
             this.dlManagerPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.dlManagerPanel7.DownloadURL = "";
+            this.dlManagerPanel7.DownloadURL = ((System.Collections.Generic.List<string>)(resources.GetObject("dlManagerPanel7.DownloadURL")));
             this.dlManagerPanel7.Location = new System.Drawing.Point(16, 486);
             this.dlManagerPanel7.Name = "dlManagerPanel7";
             this.dlManagerPanel7.Size = new System.Drawing.Size(964, 70);

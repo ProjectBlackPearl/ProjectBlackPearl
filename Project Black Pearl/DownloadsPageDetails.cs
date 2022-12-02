@@ -29,6 +29,11 @@ namespace Project_Black_Pearl
         public void SetGameName(string Name)
         {
             GameNameLabel.Text = Name;
+
+            DLMethod1.GameName = Name;
+            DLMethod2.GameName = Name;
+            DLMethod3.GameName = Name;
+            DLMethod4.GameName = Name;
         }
 
         [Category("Data")]

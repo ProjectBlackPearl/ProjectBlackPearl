@@ -18,31 +18,31 @@ namespace Project_Black_Pearl
         }
 
         [Category("Download Info")]
-        public List<string> DLURLs = new List<string>();
-        public List<string> DownloadURLs
+        public List<List<string>> DLURLs = new List<List<string>>();
+        public List<List<string>> DownloadURLs
         {
             get { return DLURLs; }
             set { SetDLURL(value); }
         }
-        public void SetDLURL(List<string> url)
+        public void SetDLURL(List<List<string>> url)
         {
             //Sets the visibility of the panels based on how many links are passed
             DLURLs = url;
             int AmountOfURLs = DLURLs.Count;
-            
+
             SetVisiblePanels(AmountOfURLs);
             SetPanelLinks(url, AmountOfURLs);
         }
 
 
         [Category("Download Info")]
-        public string MainName = " ";
-        public string GameName
+        public List<string> MainName = new List<string>();
+        public List<string> GameName
         {
             get { return MainName; }
             set { SetGameName(value); }
         }
-        public void SetGameName(string Name)
+        public void SetGameName(List<string> Name)
         {
             MainName = Name;
 
@@ -50,9 +50,8 @@ namespace Project_Black_Pearl
             SetPanelLabels(Name, AmountOfURLs);
         }
 
-
         //Sets the link for each panel
-        public void SetPanelLinks(List<string> URLs, int Amount)
+        public void SetPanelLinks(List<List<string>> URLs, int Amount)
         {
             switch (Amount)
             {
@@ -104,7 +103,7 @@ namespace Project_Black_Pearl
         }
 
         //Sets the panels to the game's name + adds indicator to each part
-        public void SetPanelLabels(string MainName, int Amount)
+        public void SetPanelLabels(List<string> MainName, int Amount)
         {
             //Tried using loops but couldn't get them to work, switch case all the way lol (Sorry if you have to deal with this code)
 
@@ -113,46 +112,46 @@ namespace Project_Black_Pearl
                 case 0:
                     break;
                 case 1:
-                    dlManagerPanel1.Title = MainName + " Part1";
+                    dlManagerPanel1.Title = MainName[0];
                     break;
                 case 2:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
                     break;
                 case 3:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
-                    dlManagerPanel3.Title = MainName + " Part3";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
+                    dlManagerPanel3.Title = MainName[2];
                     break;
                 case 4:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
-                    dlManagerPanel3.Title = MainName + " Part3";
-                    dlManagerPanel4.Title = MainName + " Part4";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
+                    dlManagerPanel3.Title = MainName[2];
+                    dlManagerPanel4.Title = MainName[3];
                     break;
                 case 5:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
-                    dlManagerPanel3.Title = MainName + " Part3";
-                    dlManagerPanel4.Title = MainName + " Part4";
-                    dlManagerPanel5.Title = MainName + " Part5";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
+                    dlManagerPanel3.Title = MainName[2];
+                    dlManagerPanel4.Title = MainName[3];
+                    dlManagerPanel5.Title = MainName[4];
                     break;
                 case 6:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
-                    dlManagerPanel3.Title = MainName + " Part3";
-                    dlManagerPanel4.Title = MainName + " Part4";
-                    dlManagerPanel5.Title = MainName + " Part5";
-                    dlManagerPanel6.Title = MainName + " Part6";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
+                    dlManagerPanel3.Title = MainName[2];
+                    dlManagerPanel4.Title = MainName[3];
+                    dlManagerPanel5.Title = MainName[4];
+                    dlManagerPanel6.Title = MainName[5];
                     break;
                 case 7:
-                    dlManagerPanel1.Title = MainName + " Part1";
-                    dlManagerPanel2.Title = MainName + " Part2";
-                    dlManagerPanel3.Title = MainName + " Part3";
-                    dlManagerPanel4.Title = MainName + " Part4";
-                    dlManagerPanel5.Title = MainName + " Part5";
-                    dlManagerPanel6.Title = MainName + " Part6";
-                    dlManagerPanel7.Title = MainName + " Part7";
+                    dlManagerPanel1.Title = MainName[0];
+                    dlManagerPanel2.Title = MainName[1];
+                    dlManagerPanel3.Title = MainName[2];
+                    dlManagerPanel4.Title = MainName[3];
+                    dlManagerPanel5.Title = MainName[4];
+                    dlManagerPanel6.Title = MainName[5];
+                    dlManagerPanel7.Title = MainName[6];
                     break;
             }
         }
@@ -163,76 +162,76 @@ namespace Project_Black_Pearl
             switch (Amount)
             {
                 case 0:
-                    dlManagerPanel1.Visible = false;
-                    dlManagerPanel2.Visible = false;
-                    dlManagerPanel3.Visible = false;
-                    dlManagerPanel4.Visible = false;
-                    dlManagerPanel5.Visible = false;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = false;
+                    dlManagerPanel2.Vizibility = false;
+                    dlManagerPanel3.Vizibility = false;
+                    dlManagerPanel4.Vizibility = false;
+                    dlManagerPanel5.Vizibility = false;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 1:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = false;
-                    dlManagerPanel3.Visible = false;
-                    dlManagerPanel4.Visible = false;
-                    dlManagerPanel5.Visible = false;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = false;
+                    dlManagerPanel3.Vizibility = false;
+                    dlManagerPanel4.Vizibility = false;
+                    dlManagerPanel5.Vizibility = false;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 2:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = false;
-                    dlManagerPanel4.Visible = false;
-                    dlManagerPanel5.Visible = false;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = false;
+                    dlManagerPanel4.Vizibility = false;
+                    dlManagerPanel5.Vizibility = false;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 3:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = true;
-                    dlManagerPanel4.Visible = false;
-                    dlManagerPanel5.Visible = false;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = true;
+                    dlManagerPanel4.Vizibility = false;
+                    dlManagerPanel5.Vizibility = false;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 4:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = true;
-                    dlManagerPanel4.Visible = true;
-                    dlManagerPanel5.Visible = false;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = true;
+                    dlManagerPanel4.Vizibility = true;
+                    dlManagerPanel5.Vizibility = false;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 5:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = true;
-                    dlManagerPanel4.Visible = true;
-                    dlManagerPanel5.Visible = true;
-                    dlManagerPanel6.Visible = false;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = true;
+                    dlManagerPanel4.Vizibility = true;
+                    dlManagerPanel5.Vizibility = true;
+                    dlManagerPanel6.Vizibility = false;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 6:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = true;
-                    dlManagerPanel4.Visible = true;
-                    dlManagerPanel5.Visible = true;
-                    dlManagerPanel6.Visible = true;
-                    dlManagerPanel7.Visible = false;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = true;
+                    dlManagerPanel4.Vizibility = true;
+                    dlManagerPanel5.Vizibility = true;
+                    dlManagerPanel6.Vizibility = true;
+                    dlManagerPanel7.Vizibility = false;
                     break;
                 case 7:
-                    dlManagerPanel1.Visible = true;
-                    dlManagerPanel2.Visible = true;
-                    dlManagerPanel3.Visible = true;
-                    dlManagerPanel4.Visible = true;
-                    dlManagerPanel5.Visible = true;
-                    dlManagerPanel6.Visible = true;
-                    dlManagerPanel7.Visible = true;
+                    dlManagerPanel1.Vizibility = true;
+                    dlManagerPanel2.Vizibility = true;
+                    dlManagerPanel3.Vizibility = true;
+                    dlManagerPanel4.Vizibility = true;
+                    dlManagerPanel5.Vizibility = true;
+                    dlManagerPanel6.Vizibility = true;
+                    dlManagerPanel7.Vizibility = true;
                     break;
             }
         }             
