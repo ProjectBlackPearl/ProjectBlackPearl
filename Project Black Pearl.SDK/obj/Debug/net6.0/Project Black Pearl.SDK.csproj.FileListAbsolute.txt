@@ -1,0 +1,12 @@
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.deps.json
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\bin\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.AssemblyReference.cache
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfoInputs.cache
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.AssemblyInfo.cs
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.csproj.CoreCompileInputs.cache
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.dll
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\refint\Project Black Pearl.SDK.dll
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\Project Black Pearl.SDK.pdb
+C:\Users\Zuni\Source\Repos\ProjectBlackPearl\Project Black Pearl.SDK\obj\Debug\net6.0\ref\Project Black Pearl.SDK.dll

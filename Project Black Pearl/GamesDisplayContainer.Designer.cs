@@ -57,7 +57,7 @@
             this.NextPageBTN.Image = ((System.Drawing.Image)(resources.GetObject("NextPageBTN.Image")));
             this.NextPageBTN.Location = new System.Drawing.Point(917, 13);
             this.NextPageBTN.Name = "NextPageBTN";
-            this.NextPageBTN.Size = new System.Drawing.Size(10, 20);
+            this.NextPageBTN.Size = new System.Drawing.Size(48, 37);
             this.NextPageBTN.TabIndex = 15;
             this.NextPageBTN.UseVisualStyleBackColor = true;
             this.NextPageBTN.Click += new System.EventHandler(this.NextPageBTN_Click);
@@ -67,9 +67,9 @@
             this.PreviousPageBTN.FlatAppearance.BorderSize = 0;
             this.PreviousPageBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PreviousPageBTN.Image = ((System.Drawing.Image)(resources.GetObject("PreviousPageBTN.Image")));
-            this.PreviousPageBTN.Location = new System.Drawing.Point(882, 13);
+            this.PreviousPageBTN.Location = new System.Drawing.Point(827, 13);
             this.PreviousPageBTN.Name = "PreviousPageBTN";
-            this.PreviousPageBTN.Size = new System.Drawing.Size(10, 20);
+            this.PreviousPageBTN.Size = new System.Drawing.Size(48, 37);
             this.PreviousPageBTN.TabIndex = 16;
             this.PreviousPageBTN.UseVisualStyleBackColor = true;
             this.PreviousPageBTN.Click += new System.EventHandler(this.PreviousPageBTN_Click);
@@ -91,9 +91,10 @@
             this.LibraryPage.AutoSize = true;
             this.LibraryPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LibraryPage.ForeColor = System.Drawing.Color.White;
-            this.LibraryPage.Location = new System.Drawing.Point(899, 16);
+            this.LibraryPage.Location = new System.Drawing.Point(881, 16);
             this.LibraryPage.Name = "LibraryPage";
-            this.LibraryPage.Size = new System.Drawing.Size(14, 15);
+            this.LibraryPage.Padding = new System.Windows.Forms.Padding(8);
+            this.LibraryPage.Size = new System.Drawing.Size(30, 31);
             this.LibraryPage.TabIndex = 19;
             this.LibraryPage.Text = "1";
             // 
@@ -134,9 +135,10 @@
             this.RefreshPageButton.FlatAppearance.BorderSize = 0;
             this.RefreshPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshPageButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshPageButton.Image")));
-            this.RefreshPageButton.Location = new System.Drawing.Point(823, 13);
+            this.RefreshPageButton.Location = new System.Drawing.Point(782, 10);
             this.RefreshPageButton.Name = "RefreshPageButton";
-            this.RefreshPageButton.Size = new System.Drawing.Size(10, 20);
+            this.RefreshPageButton.Padding = new System.Windows.Forms.Padding(5);
+            this.RefreshPageButton.Size = new System.Drawing.Size(39, 37);
             this.RefreshPageButton.TabIndex = 26;
             this.RefreshPageButton.UseVisualStyleBackColor = true;
             this.RefreshPageButton.Click += new System.EventHandler(this.RefreshPageButton_Click);

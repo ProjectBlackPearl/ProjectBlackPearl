@@ -444,8 +444,8 @@ namespace Project_Black_Pearl
                 ScrapingThread.Start();
                 Thread.Sleep(2000);
 
-                string DebugPath = "C:/Users/DissTract/Downloads/Debugging" + CurrentIndex.ToString() + ".txt";
-                File.WriteAllText(DebugPath, "Threading Worked");
+                //string DebugPath = "C:/Users/DissTract/Downloads/Debugging" + CurrentIndex.ToString() + ".txt";
+                //File.WriteAllText(DebugPath, "Threading Worked");
 
                 idx++;
                 CurrentIndex++;               
@@ -464,7 +464,7 @@ namespace Project_Black_Pearl
             {
 
                 RunBinary(ScraperPath, Args);
-                File.WriteAllText("C:/Users/DissTract/Downloads/BinaryExecuted.txt", string.Format("Scraper Path:{0} \nURL:{1} \nPrefetchTempFile:{2} \nGameName:{3} \nDonePath:{4} \n ", ScraperPath, URL, PrefetchTempFile, GameName, DonePath));
+                //File.WriteAllText("C:/Users/DissTract/Downloads/BinaryExecuted.txt", string.Format("Scraper Path:{0} \nURL:{1} \nPrefetchTempFile:{2} \nGameName:{3} \nDonePath:{4} \n ", ScraperPath, URL, PrefetchTempFile, GameName, DonePath));
 
             }
             /*
@@ -716,14 +716,14 @@ namespace Project_Black_Pearl
                 }
             }
 
-            File.WriteAllText("C:/Users/DissTract/Downloads/SearchTerms.txt", string.Format("Game Title: {0}, Game Link: {1}", GameTitles[0], ForumLinks[0]));
+            //File.WriteAllText("C:/Users/Zuni/Downloads/SearchTerms.txt", string.Format("Game Title: {0}, Game Link: {1}", GameTitles[0], ForumLinks[0]));
         }
 
         //Runs the prefetcher scraper
         public void RunPrefetchFirstPayload(string PrefetchScraperPath, string PrefetchOutputFile, string PrefetchType)
         {
             List<string> Arguments = new List<string>();
-            Arguments.Add(PrefetchOutputFile);    
+            Arguments.Add(PrefetchOutputFile);
 
             if (PrefetchType == "Binary")
             {
@@ -986,6 +986,7 @@ namespace Project_Black_Pearl
             
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = true;
             startInfo.FileName = BinaryPath;
 
             foreach(string Argument in Args)
@@ -993,11 +994,12 @@ namespace Project_Black_Pearl
                 startInfo.ArgumentList.Add(Argument);
             }
 
-            //File.WriteAllText("C:/Users/DissTract/Downloads/CrashReason.txt", string.Format("Binary path: {0}\nFirst Argument: {1}\nSecond Argument: {2}\n Third Argument: {3}\n Fourth Argument: {4} ", BinaryPath, Args[0], Args[1], Args[2], Args[3]));
+            //File.WriteAllText("C:/Users/DissTract/Downloads/CrashReason.txt", string.Format("Binary path: {0}\nFirst Argument: {1}\nSecond Argument: {2}\n Third Argument: {3}\n Fourth Argument: {4} ", BinaryPath, Args[0], Args[1], Args[2], Args[3]));          
 
             Process.Start(startInfo);
-            
         }
+
+
 
         //Loads all the installed plugins
         private void FirstLoad()
@@ -1047,6 +1049,7 @@ namespace Project_Black_Pearl
                     if (!File.Exists(PrecacheFilePath))
                     {
                         RunPrefetchFirstPayload(plugin.FirstPayloadScraper, PrecacheFilePath, plugin.FirstPayloadType);
+                        DebugLBL.Text = "Ran scraper on new thread, error expected here";
                     }
                 }
 

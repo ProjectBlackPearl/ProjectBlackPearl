@@ -46,6 +46,7 @@
             this.Info4 = new Project_Black_Pearl.CustomizableButton();
             this.Info5 = new Project_Black_Pearl.CustomizableButton();
             this.Info6 = new Project_Black_Pearl.CustomizableButton();
+            this.DebugLBL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SearchTextBox
@@ -353,11 +354,22 @@
             this.Info6.Visibility = false;
             this.Info6.Click += new System.EventHandler(this.Info6_Click);
             // 
+            // DebugLBL
+            // 
+            this.DebugLBL.AutoSize = true;
+            this.DebugLBL.ForeColor = System.Drawing.Color.White;
+            this.DebugLBL.Location = new System.Drawing.Point(210, 21);
+            this.DebugLBL.Name = "DebugLBL";
+            this.DebugLBL.Size = new System.Drawing.Size(38, 15);
+            this.DebugLBL.TabIndex = 49;
+            this.DebugLBL.Text = "label1";
+            // 
             // DownloadsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.DebugLBL);
             this.Controls.Add(this.Info6);
             this.Controls.Add(this.Info5);
             this.Controls.Add(this.Info4);
@@ -400,5 +412,6 @@
         private CustomizableButton Info4;
         private CustomizableButton Info5;
         private CustomizableButton Info6;
+        private Label DebugLBL;
     }
 }
